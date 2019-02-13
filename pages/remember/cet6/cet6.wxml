@@ -1,0 +1,7 @@
+<view class="content"> 
+  <view class="vocabulary">word</view>
+  <view class="btn">
+    <button class="btn-item"  hover-class="active-unknow" catchtouchstart="setBackground">不认识</button>
+     <button class="btn-item" hover-class="active-know" catchtouchstart="setBackground">认识</button>
+  </view>
+</view>

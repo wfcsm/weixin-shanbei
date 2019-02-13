@@ -1,0 +1,17 @@
+.container{
+  display: flex;
+  flex-direction: column;
+}
+.active {
+  background: #2E8B57;
+}
+.item {
+  width: 600rpx;
+  height: 100rpx;
+  /* background: #2E8B57; */
+  border: 2rpx solid #000;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  line-height: 100rpx;
+}

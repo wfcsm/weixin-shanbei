@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+    <button type='primary'>Start</button>
+  </view>
+</view> -->
+<view class="container">
+  <view class="item" hover-class="active" hover-stay-time="150" bindtap="changePage">{{cet4}}</view>
+  <view class="item" hover-class="active" hover-stay-time="150" bindtap="changePage">{{cet6}}</view>
+</view>

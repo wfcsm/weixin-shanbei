@@ -1,0 +1,31 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/self/self",
+    "pages/search/search",
+    "pages/remember/cet4/cet4",
+    "pages/remember/cet6/cet6",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "背单词",
+    "navigationBarTextStyle":"black"
+   },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "背单词"
+    },{
+      "pagePath": "pages/search/search",
+      "text": "查单词"
+    },{
+      "pagePath": "pages/self/self",
+      "text": "我的"
+    }],
+    "color": "#000",
+    "selectedColor": "#2E8B57",
+    "debug": true
+  }
+}

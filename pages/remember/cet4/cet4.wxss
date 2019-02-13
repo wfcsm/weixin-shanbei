@@ -1,0 +1,36 @@
+/* pages/remember/remenber.wxss */
+.content {
+  display: flex;
+  flex-direction: column;
+}
+.vocabulary {
+  margin: 30rpx 40rpx;
+  /* background: #2e8b57; */
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  border: 2px solid #eee;
+  border-radius: 10px;
+}
+.btn {
+  display: flex;
+  flex-direction: row
+}
+.btn-item {
+  width: 35%;
+  border:1px solid #000;
+  background: #fff;
+}
+.active-know {
+  background-color: #2e8b57;
+}
+.active-unknow {
+  background-color: #A52A2A;
+}
+.progress {
+   margin-left:  40rpx;
+   margin-right: 40rpx;
+   border: 2px solid #eee;
+   height: 30rpx;
+   line-height: 30rpx;
+}
