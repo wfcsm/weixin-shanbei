@@ -33,4 +33,79 @@
    border: 2px solid #eee;
    height: 30rpx;
    line-height: 30rpx;
+   /* display: flex;
+   flex-direction: row;
+   justify-content: space-between; */
+   position: relative; 
+
+}
+.progress-left ,.progress-right {
+  height: 30rpx;
+}
+.progress-left {
+  background: green;
+  position: absolute;
+  top:0;
+  left: 0; 
+  
+}
+.progress-right {
+  background: red;
+  position: absolute;
+  top:0;
+  right: 0; 
+ 
+}
+
+/* 蒙层 */
+.model-mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.3;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+.popup {
+  /* background: green; */
+  width: 75%;
+  height: 600rpx;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  /* margin:60rpx auto; */
+  justify-content: space-between;
+  border-radius: 50px;
+  border:1px solid #000;
+  position: absolute;
+  top: 60rpx;
+  left: 50%;
+  margin-left: -37.5%
+
+}
+.title ,.cancel,.main-item{
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 20px;
+}
+.title {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  background: #eee;
+  border-bottom: 2px solid #eee;
+}
+.cancel {
+  background: #eee;
+  border-top: 2px solid #eee;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.main {
+  flex: 1;
+  background: wheat;
 }

@@ -1,0 +1,28 @@
+/* pages/summarize/summarize.wxss */
+.container {
+  display:flex;
+  flex-direction: column;
+}
+.over {
+  display:flex;
+  flex-direction: row;
+}
+.again {
+  width: 600rpx;
+  height: 100rpx;
+  /* background: #2E8B57; */
+  border: 2rpx solid #000;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+.over-item {
+  height: 120rpx;
+  width: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+}
+.active {
+  background: #2E8B57;
+}

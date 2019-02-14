@@ -5,6 +5,8 @@
     "pages/search/search",
     "pages/remember/cet4/cet4",
     "pages/remember/cet6/cet6",
+    "pages/summarize/summarize",
+    "pages/popup/popup",
     "pages/logs/logs"
   ],
   "window":{
@@ -18,7 +20,7 @@
       "pagePath": "pages/index/index",
       "text": "背单词"
     },{
-      "pagePath": "pages/search/search",
+      "pagePath": "pages/popup/popup",
       "text": "查单词"
     },{
       "pagePath": "pages/self/self",

@@ -1,13 +1,27 @@
+<!--蒙层  -->
+<view class="model-mask" wx:if="{{showModel}}" catchtouchmove="preventModel"></view>
+<view class="popup" wx:if="{{showModel}}">
+  <view class="title">单词认识·</view>
+  <view class="main">
+    <view class="main-item">单词：{{content}}</view>
+    <view class="main-item">解释：{{definition}}</view>
+    <view class="main-item">发音：{{pron}}</view>
+  </view>
+  <view class="cancel" bindtap="onCancel">懂了</view>
+</view>
+
 <view class="content"> 
   <view class="progress">
-    <view ></view>
-    <view></view>
+    <view class="progress-left" style="width: {{knowWidth}}%"></view>
+    <view class="progress-right"style="width: {{100-knowWidth}}%"> </view>
   </view>
+  <!-- <progress   percent="{{width}}" stroke-width="20" /> -->
   <view class="vocabulary">
-      <view>{{content}}</view>
+      <view >{{content}}</view>
   </view>
   <view class="btn">
     <button class="btn-item" hover-class="active-know" catchtap="know">认识</button>
     <button class="btn-item"  hover-class="active-unknow" catchtap="unknow">不认识</button>
   </view>
 </view>
+
