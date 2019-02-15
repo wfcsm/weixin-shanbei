@@ -6,12 +6,14 @@ let total_word=20;  //背单词数量
 const unknow_list = [] //不记得单词的数组
 let unknow_word = unknow_list.length; //不记得单词
 
-const know_list = []//认识单词的数组
-let know_word = know_list.length; //记得单词
+let know_list = []//认识单词的数组
+let know_word = 0; //记得单词
  
 
 let LWidth;
-let RWidth;
+// let RWidth;
+ 
+let remember_list=[] ;
 
 
 
@@ -42,41 +44,30 @@ Page({
    * 点击认识按钮执行
    */
   know(){
+    know_word++
     // let LWidth;
     let width = this.wordWidth();
-    
+    // console.log(know_list.length);
     //如果认识单词等于总数
-    if (know_list.length == total_word){
+    if (know_list.length == (total_word-1)){
       //跳转到成功页面
       wx.redirectTo({
         url: '../../summarize/summarize',
       })
-   }else if((know_list.length + unknow_list.length)==total_word){
-     know_list.push(word.wordList[list[know_word]]);
-
-     LWidth = know_word * width ;
-     //随机不知道单词数组的下标
-     let index =Math.floor((Math.random()*(unknow_list.length)));
-     this.setData({
-       content:unknow_list[index].content,
-       knowWidth: LWidth,
-       definition: unknow_list[index].definition,
-       pron: unknow_list[index].pron,
-       
-     })
-
    }else{
       know_list.push(word.wordList[list[know_word]]);
       // LWidth = (know_word+1) * width+"%";
       LWidth = (know_word + 1) * width ;
+      // console.log(know_word);
+      // console.log(word.wordList[list[know_word]].content)
       this.setData({
         content: word.wordList[list[know_word]].content,
         knowWidth: LWidth,
-        definition: word.wordList[list[know_word]].definition,
-        pron: word.wordList[list[know_word]].pron
+        // definition: word.wordList[list[know_word]].definition,
+        // pron: word.wordList[list[know_word]].pron
       })
    }
-    know_word++
+    
   },
   /**
    * 关闭弹窗
@@ -103,7 +94,11 @@ Page({
    */
   unknow(){
     this.setData({
-      showModel:true
+      showModel:true,
+      content: word.wordList[list[know_word]].content,
+      knowWidth: LWidth,
+      definition: word.wordList[list[know_word]].definition,
+      pron: word.wordList[list[know_word]].pron
     })
   },
 
@@ -112,19 +107,72 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const arr=[];
-    while(arr.length<total_word){
-      let num = Math.floor(Math.random() * 1001) + 1;
-      if (arr.indexOf(num) == -1) {
-        arr.push(num);
-      }
+    const arr=[]
+    if(know_list.length==(total_word-1)){
+      know_word=0;
+      know_list.length = 0;
+      remember_list.length = 0;
+
     }
-    this.setData({
-        content:word.wordList[arr[0]].content
-    }) 
-    list =arr
-    console.log(list)
-    return list;
+
+    if (remember_list.length == total_word){
+      LWidth = (know_word + 1) * this.wordWidth();
+      this.setData({
+        content: word.wordList[remember_list[know_word]].content,
+        knowWidth: LWidth,
+        
+      })
+      return remember_list;
+    }else{
+      while (arr.length < total_word) {
+        let num = Math.floor(Math.random() * 1001) + 1;
+        if (arr.indexOf(num) == -1) {
+          arr.push(num);
+        }
+      }
+      this.setData({
+        content: word.wordList[arr[0]].content
+      })
+      list = arr
+      remember_list = arr
+      console.log(remember_list)
+      return list;
+    }
+    
+     
+
+
+
+
+
+
+
+
+
+
+
+
+    // if ((know_list.length ) == (total_word-1)){
+    //   know_word=0;
+    //   know_list.length=0;
+    //   remember_list.length=0;
+    // }
+    
+    //   const arr = [];
+    //   while (arr.length < total_word) {
+    //     let num = Math.floor(Math.random() * 1001) + 1;
+    //     if (arr.indexOf(num) == -1) {
+    //       arr.push(num);
+    //     }
+    //   }
+    //   this.setData({
+    //     content: word.wordList[arr[0]].content
+    //   })
+    //   list = arr
+    //   remember_list = arr
+    //   console.log(list)
+
+    // return list;
   },
 
   /**

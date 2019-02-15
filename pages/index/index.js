@@ -10,14 +10,27 @@ Page({
   changePage(){
     wx.navigateTo({
       url: '../remember/cet4/cet4',
+      
+    })
+  },
+  /**
+   * 跳转到查单词页面
+   */
+  search(){
+    console.log(1);
+    wx.switchTab({
+      url: '../search/search',
+      fail() {
+        console.log(2);
+      }
     })
   },
   //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
+  // bindViewTap: function() {
+  //   wx.navigateTo({
+  //     url: '../logs/logs'
+  //   })
+  // },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({

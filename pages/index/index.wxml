@@ -12,6 +12,13 @@
     <button type='primary'>Start</button>
   </view>
 </view> -->
+ <view class="search-wrapper">
+    <view class="search" bindtap="search">
+      <icon type="search" size="14" class="search-icon"></icon>
+      <view >查单词</view>
+    </view>
+ </view> 
+
 <view class="container">
   <view class="item" hover-class="active" hover-stay-time="150" bindtap="changePage">{{cet4}}</view>
   <view class="item" hover-class="active" hover-stay-time="150" bindtap="changePage">{{cet6}}</view>

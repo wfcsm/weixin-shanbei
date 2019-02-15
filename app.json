@@ -10,24 +10,32 @@
     "pages/logs/logs"
   ],
   "window":{
-    "backgroundTextStyle":"light",
+    "backgroundTextStyle":"dark",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "背单词",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh":true
+    
    },
   "tabBar": {
     "list": [{
       "pagePath": "pages/index/index",
+      "iconPath": "pages/img/home.png",
+      "selectedIconPath": "pages/img/home_HL.png",
       "text": "背单词"
     },{
-      "pagePath": "pages/popup/popup",
+      "pagePath": "pages/search/search",
+      "iconPath": "pages/img/search.png",
+      "selectedIconPath": "pages/img/search_HL.png",
       "text": "查单词"
     },{
       "pagePath": "pages/self/self",
+      "iconPath": "pages/img/my.png",
+      "selectedIconPath": "pages/img/my_HL.png",
       "text": "我的"
     }],
     "color": "#000",
-    "selectedColor": "#2E8B57",
-    "debug": true
+    "selectedColor": "#2E8B57"
   }
+
 }

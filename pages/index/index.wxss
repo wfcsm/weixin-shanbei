@@ -15,3 +15,25 @@
   text-align: center;
   line-height: 100rpx;
 }
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.search {
+  width: 75%;
+  height: 75rpx;
+  background: #eee;
+  border-radius: 50px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 75rpx;
+  color: #CDC5BF;
+  display: flex;
+  flex-direction: row;
+  justify-content: center
+}
+.search-icon {
+  padding-right: 6px;
+  padding-top: 8px
+
+}
