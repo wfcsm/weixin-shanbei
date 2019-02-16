@@ -4,7 +4,7 @@
   <icon type="success" size="70"></icon>
   <view class="over-item">结束</view>
   
-  <view class="again" hover-class="active" hover-stay-time="150">打卡</view>
+  <!-- <view class="again" hover-class="active" hover-stay-time="150">打卡</view> -->
   <view class="again" hover-class="active" hover-stay-time="150" bindtap="repeat">再来一组</view>
   
 </view>
