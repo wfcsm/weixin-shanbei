@@ -13,8 +13,8 @@
     "backgroundTextStyle":"dark",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "背单词",
-    "navigationBarTextStyle":"black",
-    "enablePullDownRefresh":true
+    "navigationBarTextStyle":"black"
+    
     
    },
   "tabBar": {
@@ -28,11 +28,6 @@
       "iconPath": "pages/img/search.png",
       "selectedIconPath": "pages/img/search_HL.png",
       "text": "查单词"
-    },{
-      "pagePath": "pages/self/self",
-      "iconPath": "pages/img/my.png",
-      "selectedIconPath": "pages/img/my_HL.png",
-      "text": "我的"
     }],
     "color": "#000",
     "selectedColor": "#2E8B57"

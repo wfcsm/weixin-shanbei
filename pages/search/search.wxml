@@ -1,4 +1,16 @@
 <!--pages/search/search.wxml-->
-<view>
-  
+<view class="main">
+  <input class="search" placeholder="查单词" maxlength="-1" selection-start="70" bindinput="search" auto-focus ></input>
 </view>
+
+<block wx:if="{{show}}">
+  <view  class="word" wx:for="{{arr}}" wx:for-index="idx" wx:for-item="item" wx:key="idx">
+          <view class="content">{{item.content}}</view>
+          <view class="defintion">{{item.definition}}</view>
+    </view>
+</block>
+
+
+
+
+

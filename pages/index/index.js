@@ -17,7 +17,7 @@ Page({
    * 跳转到查单词页面
    */
   search(){
-    console.log(1);
+    
     wx.switchTab({
       url: '../search/search',
       fail() {
